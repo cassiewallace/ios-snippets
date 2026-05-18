@@ -1,6 +1,6 @@
 # ios-snippets
 
-Reusable, self-contained Swift/SwiftUI components extracted from production iOS code. Each snippet has no external dependencies beyond the frameworks listed.
+Reusable, self-contained Swift and SwiftUI code snippets.
 
 ## Contents
 
