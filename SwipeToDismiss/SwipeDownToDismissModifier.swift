@@ -3,7 +3,7 @@ import SwiftUI
 /// Downward swipe-to-dismiss for full-screen overlays. Fades a scrim with
 /// the gesture, slides the content off-screen past the dismiss threshold,
 /// and snaps back otherwise. Honors Reduce Motion.
-private struct SwipeToDismissModifier: ViewModifier {
+private struct SwipeDownToDismissModifier: ViewModifier {
     let isEnabled: Bool
     let dragStartMaxY: CGFloat?
     let isDragging: Binding<Bool>?
@@ -150,13 +150,13 @@ extension View {
     ///     (TabView, WebView) must be paused to avoid competing with the
     ///     gesture.
     ///   - onDismiss: Called when the drag commits past the dismiss threshold.
-    func swipeToDismiss(
+    func swipeDownToDismiss(
         isEnabled: Bool = true,
         dragStartMaxY: CGFloat? = nil,
         isDragging: Binding<Bool>? = nil,
         onDismiss: @escaping () -> Void
     ) -> some View {
-        modifier(SwipeToDismissModifier(
+        modifier(SwipeDownToDismissModifier(
             isEnabled: isEnabled,
             dragStartMaxY: dragStartMaxY,
             isDragging: isDragging,
